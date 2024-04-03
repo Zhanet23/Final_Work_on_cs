@@ -4,6 +4,20 @@ using System.Diagnostics.Tracing;
 using System.Globalization;
 using System.Threading.Tasks.Dataflow;
 
+//------------------------------------------------------------------------------------------------
+// метод принимает на вход пустой массив заданной длины и возвращает его заполненным пользователем
+static string [] Fill_Array (string [] str) 
+{
+   for (int i = 0; i < str.Length; i++) 
+   {
+   Console.Write($"Введите {i} элемент: ");
+   str[i] = Console.ReadLine()!;
+   }
+   return str;
+}
+//------------------------------------------------------------------------------------------------
+
+
 // метод возвращает новый массив по условию задачи, используя метод Resize (убирает двойное прохождение циклом по исходному массиву)
 static string [] Resize_mass (string [] str) {
 int k = 0;
